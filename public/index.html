@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact book</title>
+    <!-- connect style file for document -->
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+    <!-- create main div-block wrapper-->
+    <div class="wrapper">   
+        <h2>Книга контактов</h2>
+        <div>
+            <!-- create header of the table with our data -->
+            <table class="contactsTable">
+                <thead>
+                    <tr>
+                        <th>Имя пользователя</th>
+                        <th>Логин</th>
+                        <th>Email</th>
+                        <th>Адрес проживания</th>
+                    </tr>
+                </thead>
+                <!-- create the main part of the table, where we get data from JSON -->
+                <tbody id="contactsTable">
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- create a form to edit data in the main table -->
+        <div id="editTable" class="editTableClass">
+            <p class="editTableName">Изменить данные </p> 
+            <i>Имя пользователя: </i><input id="inputName" type="text" name="name" id="name">
+            <i>Логин: </i><input id="inputLogin" type="text" name="login" id="login">
+            <i>Email: </i><input id="inputEmail" type="text" name="email" id="email">
+            <i>Адрес проживания: </i><input id="inputAddress" type="text" name="address" id="address">
+            <button id="saveBtn" class="saveBtn" onClick="saveChanges(event)">Сохранить</button>
+        </div>
+    </div>
+<!-- connect JQuery for use JSON and connect script file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../src/script.js"></script>
+</body>
+</html>

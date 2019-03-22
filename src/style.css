@@ -1,0 +1,170 @@
+/* add image on our background */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url(img/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* hide edit and delete buttons */
+#editButton, #deleteButton {
+    display: none;
+}
+
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contactsTable {
+    float: left;
+    margin-left: 15px;
+}
+
+/* arrange the input blocks in the column */
+input {
+    display: block;
+}
+
+/* hide edit table and fix it position on the screen */
+#editTable {
+    display: none;
+    position: fixed;
+    right: 30%;
+    top: 30%;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+/* style for header block in the table */
+th {
+    border: 1px solid #b6b6b6;
+    border-radius: 5px;
+    background: lightgrey;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* style for main block in the table */
+td {
+    border: 1px solid #b6b6b6;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* hide border and background for edit and delete buttons */
+td:nth-child(5), td:nth-child(6) {
+    border: none;
+    background: none;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.editTableName {
+    text-align: center;
+}
+
+.btn, .saveBtn, #saveBtn {
+    border: 1px solid#0394d0;
+    border-radius: 5px;
+    background: #fff;
+    color: #0394d0;
+}
+
+/* create media query to change the design for smartphones */
+
+@media (max-width: 480px) {
+    td {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    td:nth-child(5), td:nth-child(6) {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    th {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .wrapper, input, button {
+        font-size: 0.5em;
+    }
+
+    .contactsTable {
+        float: none;
+        margin-left: 0px;
+    }
+    
+}
+
+/* create media query to change the design for the tablets */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    td {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    td:nth-child(5), td:nth-child(6) {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    th {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    .wrapper, input, button {
+        font-size: 0.6em;
+    }
+
+    .contactsTable {
+        float: none;
+        margin-left: 5px;
+    }
+}
+
+/* create media query to change the design for monitors */
+
+@media (min-width: 769px) and (max-width: 1224px) {
+    td {
+        padding: 7px;
+        margin-bottom: 7px;
+    }
+
+    td:nth-child(5), td:nth-child(6) {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    th {
+        padding: 7px;
+        margin-bottom: 7px;
+    }
+
+    .wrapper {
+        font-size: 1em;
+    }
+
+    input, button {
+        font-size: 0.9em;
+    }
+
+    .contactsTable {
+        float: none;
+        margin-left: 10px;
+    }
+}
